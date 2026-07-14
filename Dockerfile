@@ -1,16 +1,12 @@
-FROM python:3.13-slim
+FROM python:3.12-slim
 
 WORKDIR /workspace
 
-RUN pip install --no-cache-dir \
-    jupyter \
-    pandas \
-    numpy \
-    matplotlib \
-    seaborn \
-    scikit-learn \
-    scipy \
-    plotly
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
 
 EXPOSE 8888
 

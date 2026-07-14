@@ -92,7 +92,8 @@ models/
 outputs/
 
 # Notebooks and checkpoints
-
+.ipynb_checkpoints/
+*.Trash-0
 
 # bytecode
 *.pyc
